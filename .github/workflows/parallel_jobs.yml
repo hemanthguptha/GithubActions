@@ -9,7 +9,11 @@ on:
     branches: [ "main" ]
 
 jobs:
-  
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "Hello world"
 
   test:
     runs-on: ubuntu-latest
