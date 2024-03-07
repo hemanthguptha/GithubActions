@@ -5,7 +5,7 @@ resource "azurerm_virtual_machine" "vm1" {
   network_interface_ids = [azurerm_network_interface.nic1.id]
   vm_size               = "Standard_DS1_v2"
   storage_os_disk {
-    name = "vishnudisk1"
+    name = "hemantSTG"
     caching = "ReadWrite"
     managed_disk_type = "Standard_LRS"
     create_option = "FromImage"
@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "vm1" {
 }
 
 resource "azurerm_virtual_network" "vnet1" {
-  name                = "shubham2361"
+  name                = "hemantVN"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
   resource_group_name = "TerraformRG"
@@ -45,14 +45,14 @@ resource "azurerm_virtual_network" "vnet1" {
 
 
 resource "azurerm_subnet" "subnet1" {
-  name                 = "vishnusubnet11"
+  name                 = "hemantSN"
   resource_group_name  = "TerraformRG"
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
 resource "azurerm_network_interface" "nic1" {
-  name                = "vishnunic111"
+  name                = "hemantNIC"
   location            = "East US"
   resource_group_name = "TerraformRG"
 
@@ -65,7 +65,7 @@ resource "azurerm_network_interface" "nic1" {
 }
 
 resource "azurerm_public_ip" "public1" {
-  name = "vishnupublicip1611"
+  name = "hemantPublicIP"
   resource_group_name = "TerraformRG"
   location = "East US"
   allocation_method = "Static"
