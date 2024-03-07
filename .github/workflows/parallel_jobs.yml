@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
       - uses: actions/checkout@v2
-      - run: rm .github/hemanthguptha/GithubActions/blob/main/test.txt
+      - run: rm test.txt
 
   test:
     runs-on: ubuntu-latest
