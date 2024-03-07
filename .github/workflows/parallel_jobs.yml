@@ -14,8 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
-      - uses: remove test.txt file@1
-      - run: echo "remove test file"
+      - uses: actions/checkout@v2
+      - run: rm .github/test.txt
 
   test:
     runs-on: ubuntu-latest
