@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello world"
+      - uses: remove test.txt file@1
+      - run: rm test.txt
 
   test:
     runs-on: ubuntu-latest
