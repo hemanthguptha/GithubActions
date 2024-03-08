@@ -18,6 +18,9 @@ jobs:
       matrix:
         version: [10,20]
         names: ['test1' ,'test2']
+    # condition     
+    #if: ${{ github.ref == 'refs/heads/main' }}  
+    if: github.repository == 'hemanthguptha/matrix-demo' #bug is here
     runs-on: ubuntu-latest
     env:
       Day: monday
