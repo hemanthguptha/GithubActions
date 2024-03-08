@@ -16,7 +16,7 @@ jobs:
   example_matrix:
     strategy:
       matrix:
-        version: [10]
+        version: [10,20]
         names: ['test1' ,'test2']
     runs-on: ubuntu-latest
     env:
