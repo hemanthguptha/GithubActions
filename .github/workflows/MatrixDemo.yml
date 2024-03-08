@@ -17,10 +17,9 @@ jobs:
     strategy:
       matrix:
         version: [10,20]
-        names: ['test1' ,'test2']
     # condition     
-    #if: ${{ github.ref == 'refs/heads/main' }}  
-    if: github.repository == 'hemanthguptha/GithubActions'
+    if: ${{ github.ref == 'refs/heads/dev' }}  
+    #if: github.repository == 'hemanthguptha/GithubActions'
     runs-on: ubuntu-latest
     env:
       Day: monday
